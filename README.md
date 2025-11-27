@@ -1,4 +1,4 @@
-✅ PROJECT DESCRIPTION
+PROJECT DESCRIPTION
 A Lady-Hunter-Tiger Game with C Programming
 
 The goal of this project is to create an interactive C-language program that mimics the well-known game Lady-Hunter-Tiger. This game is well-known for its straightforward rules and fast decision-making, and it resembles Rock, Paper, Scissors. This project's goal is to create a command-line game in which a player takes on the computer. After accepting the user's selection (Lady, Hunter, or Tiger), the program makes a random selection for the computer, compares the outcomes using predetermined criteria, decides who wins the round, updates the scoreboard, and lets the user continue or stop playing.
@@ -15,7 +15,8 @@ Lady is eaten by a tiger
 Following each round, the scoreboard is updated to show the total number of wins, losses, and draws. Until the user chooses to end the game, a loop structure permits repeated gameplay.
 
 Functions, conditional statements, modular programming, input validation, loops, and randomization are some of the fundamental programming concepts that are demonstrated in this project. It also shows how C can be used to implement logical decision-making that is used in real games. This project is appropriate for students learning basic programming concepts and structured program design because of its simplicity, clarity, and interactivity.
-✅ INTRODUCTION
+
+ INTRODUCTION
 
 Games provide an excellent way to learn programming because they combine logic, conditions, user interaction, and controlled randomness. The Lady–Hunter–Tiger game is a simple decision-based game where the outcome depends on comparing the user’s choice with the computer’s randomly generated choice. This makes it ideal for demonstrating how conditional statements, user-defined functions, and modular programming work in the C language.
 
