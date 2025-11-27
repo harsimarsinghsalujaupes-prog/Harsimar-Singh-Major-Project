@@ -1,5 +1,4 @@
 PROJECT DESCRIPTION
-A Lady-Hunter-Tiger Game with C Programming
 
 The goal of this project is to create an interactive C-language program that mimics the well-known game Lady-Hunter-Tiger. This game is well-known for its straightforward rules and fast decision-making, and it resembles Rock, Paper, Scissors. This project's goal is to create a command-line game in which a player takes on the computer. After accepting the user's selection (Lady, Hunter, or Tiger), the program makes a random selection for the computer, compares the outcomes using predetermined criteria, decides who wins the round, updates the scoreboard, and lets the user continue or stop playing.
 
