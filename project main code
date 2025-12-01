@@ -1,0 +1,85 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int userChoice, computerChoice;
+    int userScore = 0, compScore = 0, draws = 0;
+    int round = 1;
+
+    srand(time(0));
+
+    printf("=== Lady Hunter Tiger - Best of 5 Series ===\n");
+
+    while (userScore < 3 && compScore < 3 && round <= 5) {
+
+        printf("\nRound %d:\n", round);
+        printf("1. Lady\n2. Hunter\n3. Tiger\nEnter your choice (1-3): ");
+        scanf("%d", &userChoice);
+
+        if (userChoice < 1 || userChoice > 3) {
+            printf("Invalid choice. Please enter 1, 2 or 3.\n");
+            continue;
+        }
+
+        computerChoice = (rand() % 3) + 1;
+
+        printf("You chose: ");
+        if (userChoice == 1) printf("Lady\n");
+        else if (userChoice == 2) printf("Hunter\n");
+        else printf("Tiger\n");
+
+        printf("Computer chose: ");
+        if (computerChoice == 1) printf("Lady\n");
+        else if (computerChoice == 2) printf("Hunter\n");
+        else printf("Tiger\n");
+
+        if (userChoice == computerChoice) {
+            printf("Story: Both chose the same. It's a draw!\n");
+            draws++;
+            continue;
+        }
+
+        if ((userChoice == 2 && computerChoice == 3) ||
+            (userChoice == 3 && computerChoice == 1) ||
+            (userChoice == 1 && computerChoice == 2)) {
+
+            if (userChoice == 2 && computerChoice == 3)
+                printf("Story: Hunter kills Tiger!\n");
+            else if (userChoice == 3 && computerChoice == 1)
+                printf("Story: Tiger eats Lady!\n");
+            else
+                printf("Story: Lady tricks Hunter!\n");
+
+            printf("Result: You win the round!\n");
+            userScore++;
+        }
+        else {
+
+            if (computerChoice == 2 && userChoice == 3)
+                printf("Story: Hunter kills Tiger!\n");
+            else if (computerChoice == 3 && userChoice == 1)
+                printf("Story: Tiger eats Lady!\n");
+            else
+                printf("Story: Lady tricks Hunter!\n");
+
+            printf("Result: Computer wins the round!\n");
+            compScore++;
+        }
+
+        printf("\nScoreboard:\nYou: %d\nComputer: %d\nDraws: %d\n", 
+               userScore, compScore, draws);
+
+        round++;
+    }
+
+    printf("\n=== FINAL RESULT ===\n");
+    printf("You: %d\nComputer: %d\nDraws: %d\n", userScore, compScore, draws);
+
+    if (userScore > compScore)
+        printf("Winner of the Best of 5 Series: YOU! 🎉\n");
+    else
+        printf("Winner of the Best of 5 Series: COMPUTER! 🤖\n");
+
+    return 0;
+}
